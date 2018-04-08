@@ -1,5 +1,5 @@
-import React from 'react'
-import Book from './Book'
+import React from 'react';
+import Book from './Book';
 
 class BookShelf extends React.Component {
     render() {
@@ -16,11 +16,11 @@ class BookShelf extends React.Component {
             <div className="bookshelf-books">
               <ol className="books-grid">
                 {getShelfBooks(shelf).map(book => {
-                return <li key={book.title}><Book book={book} shelf={shelf} handler={handler}/></li>})}
+                return <li key={book.id}><Book book={book} shelf={shelf} handler={handler}/></li>})}
               </ol>
             </div>
           </div>
-    );
+        );
     }
 }
 
