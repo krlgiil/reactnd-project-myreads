@@ -54,7 +54,7 @@ class BooksApp extends React.Component {
     if (books && typeof books.error === 'undefined') {
       //List of books Ids on the shelves
       const booksId = this.state.data.map(book => book.id);
-      data = data.map(book => {
+      data = books.map(book => {
         //If an existing book in the shelves, is returned during the search then update the shelf
         //as books in the shelves and in the search are in 2 different objects
         if (booksId.indexOf(book.id) !== -1) {
